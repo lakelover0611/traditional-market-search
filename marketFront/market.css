@@ -1,0 +1,264 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.mainBox {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.searchBtn {
+  background: #5bc0de;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.searchBtn:hover {
+  background-color: #31b0d5;
+}
+
+.tableAll {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+  background: #333;
+  color: #fff;
+}
+
+.table thead tr th {
+  padding: 12px;
+  text-align: center;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.table tbody tr td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.seebtn {
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.seebtn:hover {
+  background: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 6px;
+}
+
+#pagebtn {
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #eee;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+#pagebtn:hover {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+  color: white;
+}
+
+.ppp img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 팝업창 */
+.viewDetails {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 700px;
+  max-width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup img {
+  width: 40%;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-divider {
+  width: 10px;
+  height: 80%;
+  margin: 0 20px;
+}
+
+.popup-content {
+  flex: 1;
+}
+
+.popup-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.popup-content p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.popup-content a {
+  color: #5bc0de;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.popup-content a:hover {
+  text-decoration: underline;
+}
+
+.closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.closebtn:hover {
+  color: #333;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
